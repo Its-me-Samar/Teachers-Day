@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.teacher-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+button {
+    border: none;
+    background-color: #FFD700;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: confetti-fall 3s ease-in-out infinite, confetti-bounce 3s ease-in-out infinite;
+}
+
+/* ... (rest of the CSS) ... */
+
+.balloon {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    animation: balloon-float 6s ease-in-out infinite alternate;
+}
+
+@keyframes balloon-float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
