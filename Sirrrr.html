@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .card {
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: confetti-fall 3s ease-in-out infinite, confetti-bounce 3s ease-in-out infinite;
+        }
+        @keyframes confetti-fall {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        @keyframes confetti-bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .sunburst {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(#FFD700, transparent);
+            opacity: 0.5;
+            border-radius: 50%;
+            animation: sunburst-rotate 10s linear infinite;
+        }
+        @keyframes sunburst-rotate {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="sunburst"></div>
+        <h1>Happy Teacher's Day Deepak Sir!</h1>
+        <img src="teacher_picture.jpg" alt="Teacher Picture">
+        <p>Thank you for your guidance and support.</p>
+        <button id="wishButton">Click to Wish</button>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <!-- Add more confetti elements here -->
+    </div>
+
+    <script>
+        const wishButton = document.getElementById('wishButton');
+
+        wishButton.addEventListener('click', () => {
+            alert("Wishing Deepak Sir a wonderful Teacher's Day!");
+        });
+    </script>
+</body>
+</html>
